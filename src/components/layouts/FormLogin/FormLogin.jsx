@@ -33,7 +33,15 @@ export const FormLogin = () =>{
         console.log(data.form)
         postData()
     }
-    
+
+
+    axios.get('https://backend-edw.herokuapp.com/usuarios')
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
     
     return(
         <div className="form">
